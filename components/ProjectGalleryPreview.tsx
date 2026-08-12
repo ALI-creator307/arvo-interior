@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PROJECT_GALLERY, getWhatsAppLink } from "@/lib/constants";
-import { MessageCircle, ArrowRight, X } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export default function ProjectGalleryPreview() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -64,7 +65,7 @@ export default function ProjectGalleryPreview() {
           ))}
         </div>
 
-        {/* Gallery Grid (Clean image display with title & category BELOW image) */}
+        {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <div
@@ -135,8 +136,8 @@ export default function ProjectGalleryPreview() {
                   rel="noopener noreferrer"
                   className="px-5 py-3 rounded-xl bg-emerald-whatsapp text-white font-bold text-xs flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform"
                 >
-                  <MessageCircle className="w-4 h-4 fill-current" />
-                  <span>Request Similar Quote</span>
+                  <WhatsAppIcon className="w-4 h-4" />
+                  <span>WhatsApp</span>
                 </a>
               </div>
             </div>

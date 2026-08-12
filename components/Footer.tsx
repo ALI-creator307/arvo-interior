@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { BUSINESS_INFO, SERVICES, CITIES, getWhatsAppLink } from "@/lib/constants";
 
 function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
@@ -94,7 +95,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-2.5 rounded-xl bg-emerald-whatsapp/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-whatsapp hover:text-white transition-all font-semibold"
                 >
-                  <MessageCircle className="w-5 h-5 shrink-0 fill-current" />
+                  <WhatsAppIcon className="w-5 h-5 shrink-0" />
                   <span>WhatsApp: {BUSINESS_INFO.phone}</span>
                 </a>
               </li>

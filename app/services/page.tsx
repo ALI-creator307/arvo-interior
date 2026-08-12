@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { SERVICES, BUSINESS_INFO, getWhatsAppLink } from "@/lib/constants";
-import { MessageCircle, Check, Tv, Layers, Blinds, Grid, Paintbrush } from "lucide-react";
+import { SERVICES, getWhatsAppLink } from "@/lib/constants";
+import { Check, Tv, Layers, Blinds, Grid, Paintbrush } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import CTASection from "@/components/CTASection";
 
 export const metadata = {
@@ -100,8 +101,8 @@ export default function ServicesPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold bg-emerald-whatsapp text-white text-xs sm:text-sm hover:bg-emerald-600 transition-all shadow-md"
                     >
-                      <MessageCircle className="w-4 h-4 fill-current" />
-                      <span>Request {service.title} Quote</span>
+                      <WhatsAppIcon className="w-4 h-4" />
+                      <span>WhatsApp</span>
                     </a>
                   </div>
                 </div>

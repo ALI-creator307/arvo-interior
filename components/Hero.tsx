@@ -2,7 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import { MessageCircle, ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { BUSINESS_INFO, getWhatsAppLink } from "@/lib/constants";
 
 export default function Hero() {
@@ -16,7 +17,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Heading, Subheadline & CTAs */}
           <div className="lg:col-span-7 space-y-5 text-left">
-            {/* Main Dominant Heading - Explicit Mobile Base text-4xl */}
+            {/* Main Dominant Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] sm:leading-tight">
               Interior Installation Services in{" "}
               <span className="text-gold-500">Dubai, Sharjah & Ajman</span>
@@ -53,10 +54,10 @@ export default function Hero() {
                 href={heroWhatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-sm sm:text-base font-bold bg-emerald-whatsapp text-white hover:bg-emerald-600 hover:scale-[1.02] transition-all shadow-md"
+                className="flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl text-sm sm:text-base font-bold bg-emerald-whatsapp text-white hover:bg-emerald-600 hover:scale-[1.02] transition-all shadow-md"
               >
-                <MessageCircle className="w-5 h-5 fill-current" />
-                <span>Get Free WhatsApp Quote</span>
+                <WhatsAppIcon className="w-5 h-5" />
+                <span>WhatsApp</span>
               </a>
 
               <a
@@ -69,7 +70,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Hero Image Frame (Clean image display with caption below) */}
+          {/* Right Column: Hero Image Frame */}
           <div className="lg:col-span-5 space-y-3">
             <div className="relative rounded-2xl overflow-hidden bg-charcoal-900 border border-white/10 shadow-xl">
               <div className="relative aspect-[4/3] sm:aspect-[4/5] w-full overflow-hidden">

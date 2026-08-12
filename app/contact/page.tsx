@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { BUSINESS_INFO, SERVICES, CITIES, getWhatsAppLink } from "@/lib/constants";
-import { MessageCircle, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import CTASection from "@/components/CTASection";
 
 function InstagramIcon({ className = "w-5 h-5" }: { className?: string }) {
@@ -59,7 +60,7 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
           <div className="lg:col-span-7 rounded-2xl bg-charcoal-900 p-6 sm:p-8 border border-white/10 space-y-5">
             <div>
               <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                <MessageCircle className="w-5 h-5 text-emerald-400 fill-current" />
+                <WhatsAppIcon className="w-5 h-5 text-emerald-400" />
                 <span>WhatsApp Quote Request</span>
               </h2>
               <p className="text-xs text-zinc-400 mt-1">
@@ -141,8 +142,8 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
                 type="submit"
                 className="w-full py-3.5 rounded-xl bg-emerald-whatsapp text-white font-bold text-sm hover:bg-emerald-600 transition-all flex items-center justify-center gap-2 shadow-md"
               >
-                <MessageCircle className="w-4 h-4 fill-current" />
-                <span>Send via WhatsApp for Quote</span>
+                <WhatsAppIcon className="w-5 h-5" />
+                <span>WhatsApp</span>
               </button>
             </form>
           </div>
@@ -162,7 +163,7 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
                     rel="noopener noreferrer"
                     className="flex items-center gap-3.5 p-3 rounded-xl bg-emerald-whatsapp/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-whatsapp hover:text-white transition-all font-semibold"
                   >
-                    <MessageCircle className="w-5 h-5 shrink-0 fill-current" />
+                    <WhatsAppIcon className="w-5 h-5 shrink-0" />
                     <div>
                       <p className="text-xs text-zinc-300">WhatsApp Support</p>
                       <p className="text-sm font-bold">{BUSINESS_INFO.phone}</p>

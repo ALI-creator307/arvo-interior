@@ -1,5 +1,6 @@
 import React from "react";
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { BUSINESS_INFO, getWhatsAppLink } from "@/lib/constants";
 
 export default function CTASection() {
@@ -23,10 +24,10 @@ export default function CTASection() {
             href={ctaWhatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-bold bg-emerald-whatsapp text-white hover:bg-emerald-600 transition-all shadow-md"
+            className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl text-sm font-bold bg-emerald-whatsapp text-white hover:bg-emerald-600 transition-all shadow-md"
           >
-            <MessageCircle className="w-5 h-5 fill-current" />
-            <span>Get WhatsApp Quote</span>
+            <WhatsAppIcon className="w-5 h-5" />
+            <span>WhatsApp</span>
           </a>
 
           <a

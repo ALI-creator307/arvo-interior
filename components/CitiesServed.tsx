@@ -1,6 +1,7 @@
 import React from "react";
 import { CITIES, getWhatsAppLink } from "@/lib/constants";
-import { MapPin, MessageCircle } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export default function CitiesServed() {
   return (
@@ -53,8 +54,8 @@ export default function CitiesServed() {
                     rel="noopener noreferrer"
                     className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold bg-emerald-whatsapp text-white hover:bg-emerald-600 hover:scale-[1.02] transition-all"
                   >
-                    <MessageCircle className="w-4 h-4 fill-current" />
-                    <span>Request {city.name} Quote</span>
+                    <WhatsAppIcon className="w-4 h-4" />
+                    <span>WhatsApp</span>
                   </a>
                 </div>
               </div>

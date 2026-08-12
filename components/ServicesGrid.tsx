@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Tv, Layers, Blinds, Grid, Paintbrush, MessageCircle, ArrowRight } from "lucide-react";
+import { Tv, Layers, Blinds, Grid, Paintbrush, ArrowRight } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { SERVICES, getWhatsAppLink } from "@/lib/constants";
 
 const ICON_MAP = {
@@ -71,8 +72,8 @@ export default function ServicesGrid() {
                       rel="noopener noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-xs font-bold bg-emerald-whatsapp text-white hover:bg-emerald-600 transition-all"
                     >
-                      <MessageCircle className="w-3.5 h-3.5 fill-current" />
-                      <span>WhatsApp Quote</span>
+                      <WhatsAppIcon className="w-4 h-4" />
+                      <span>WhatsApp</span>
                     </a>
 
                     <Link
