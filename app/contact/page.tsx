@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { BUSINESS_INFO, SERVICES, CITIES, getWhatsAppLink } from "@/lib/constants";
-import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { MessageCircle, Mail } from "lucide-react";
 import CTASection from "@/components/CTASection";
 
 function InstagramIcon({ className = "w-5 h-5" }: { className?: string }) {
@@ -40,67 +40,67 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
   return (
     <div className="min-h-screen bg-charcoal-950 text-white">
       {/* Header Banner */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-charcoal-900 via-charcoal-950 to-charcoal-950 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-4">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-            Contact <span className="gold-gradient-text">Arvo Interior</span>
+      <section className="relative py-12 md:py-16 bg-charcoal-900 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-3">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+            Contact <span className="text-gold-500">Arvo Interior</span>
           </h1>
 
-          <p className="text-zinc-300 text-base sm:text-lg max-w-2xl leading-relaxed">
-            Get a quick WhatsApp installation quote or call us directly. We respond promptly during working hours.
+          <p className="text-sm sm:text-base text-zinc-400 font-normal max-w-2xl leading-relaxed">
+            Get a quick WhatsApp installation quote or contact us directly. We respond promptly during working hours.
           </p>
         </div>
       </section>
 
       {/* Main Form & Contact Info Section */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* Form */}
-          <div className="lg:col-span-7 rounded-3xl glass-panel p-6 sm:p-10 border border-gold-500/30 space-y-6">
+          <div className="lg:col-span-7 rounded-2xl bg-charcoal-900 p-6 sm:p-8 border border-white/10 space-y-5">
             <div>
-              <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <MessageCircle className="w-6 h-6 text-emerald-400 fill-current" />
-                <span>WhatsApp Quote Request Form</span>
+              <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                <MessageCircle className="w-5 h-5 text-emerald-400 fill-current" />
+                <span>WhatsApp Quote Request</span>
               </h2>
               <p className="text-xs text-zinc-400 mt-1">
-                Select your service and location to send a formatted WhatsApp message.
+                Select your service and location to send a pre-filled WhatsApp message.
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-zinc-300">Your Name *</label>
+                  <label className="text-xs font-medium text-zinc-300">Your Name *</label>
                   <input
                     type="text"
                     required
                     placeholder="e.g. Ahmed"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-charcoal-900 border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:border-gold-500 text-sm"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-charcoal-950 border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:border-gold-500 text-sm"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-zinc-300">Phone / WhatsApp Number *</label>
+                  <label className="text-xs font-medium text-zinc-300">Phone / WhatsApp *</label>
                   <input
                     type="tel"
                     required
                     placeholder="+971 50 123 4567"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-charcoal-900 border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:border-gold-500 text-sm"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-charcoal-950 border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:border-gold-500 text-sm"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-zinc-300">City / Location *</label>
+                  <label className="text-xs font-medium text-zinc-300">City / Location *</label>
                   <select
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-charcoal-900 border border-white/10 text-white focus:outline-none focus:border-gold-500 text-sm"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-charcoal-950 border border-white/10 text-white focus:outline-none focus:border-gold-500 text-sm"
                   >
                     {CITIES.map((c) => (
                       <option key={c.name} value={c.name} className="bg-charcoal-900 text-white">
@@ -111,11 +111,11 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-zinc-300">Installation Service *</label>
+                  <label className="text-xs font-medium text-zinc-300">Installation Service *</label>
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-charcoal-900 border border-white/10 text-white focus:outline-none focus:border-gold-500 text-sm"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-charcoal-950 border border-white/10 text-white focus:outline-none focus:border-gold-500 text-sm"
                   >
                     {SERVICES.map((s) => (
                       <option key={s.id} value={s.title} className="bg-charcoal-900 text-white">
@@ -127,21 +127,21 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-zinc-300">Project Details / Measurements (Optional)</label>
+                <label className="text-xs font-medium text-zinc-300">Project Details (Optional)</label>
                 <textarea
                   rows={4}
-                  placeholder="e.g. TV mounting + floating console on wall in Downtown Dubai."
+                  placeholder="e.g. TV mounting and wall panel fitting in Downtown Dubai."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-charcoal-900 border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:border-gold-500 text-sm"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-charcoal-950 border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:border-gold-500 text-sm"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl bg-emerald-whatsapp text-white font-bold text-base whatsapp-glow hover:bg-emerald-600 transition-all flex items-center justify-center gap-2 shadow-xl"
+                className="w-full py-3.5 rounded-xl bg-emerald-whatsapp text-white font-bold text-sm hover:bg-emerald-600 transition-all flex items-center justify-center gap-2 shadow-md"
               >
-                <MessageCircle className="w-5 h-5 fill-current" />
+                <MessageCircle className="w-4 h-4 fill-current" />
                 <span>Send via WhatsApp for Quote</span>
               </button>
             </form>
@@ -149,8 +149,8 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
 
           {/* Direct Contact Info */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-8 rounded-3xl glass-panel border border-white/10 space-y-6">
-              <h3 className="text-xl font-bold text-white border-b border-gold-500/30 pb-3">
+            <div className="p-6 rounded-2xl bg-charcoal-900 border border-white/10 space-y-5">
+              <h3 className="text-lg font-bold text-white border-b border-white/10 pb-3">
                 Direct Contact
               </h3>
 
@@ -160,12 +160,12 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
                     href={getWhatsAppLink(`Hi Arvo Interior, I need an installation quote.`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-3.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-whatsapp hover:text-white transition-all font-bold"
+                    className="flex items-center gap-3.5 p-3 rounded-xl bg-emerald-whatsapp/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-whatsapp hover:text-white transition-all font-semibold"
                   >
-                    <MessageCircle className="w-6 h-6 shrink-0 fill-current" />
+                    <MessageCircle className="w-5 h-5 shrink-0 fill-current" />
                     <div>
                       <p className="text-xs text-zinc-300">WhatsApp Support</p>
-                      <p className="text-base">{BUSINESS_INFO.phone}</p>
+                      <p className="text-sm font-bold">{BUSINESS_INFO.phone}</p>
                     </div>
                   </a>
                 </li>
@@ -173,12 +173,12 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
                 <li>
                   <a
                     href={`mailto:${BUSINESS_INFO.email}`}
-                    className="flex items-center gap-4 p-3.5 rounded-2xl bg-charcoal-900 border border-white/10 text-zinc-200 hover:text-gold-400 hover:border-gold-500/40 transition-all"
+                    className="flex items-center gap-3.5 p-3 rounded-xl bg-charcoal-950 border border-white/10 text-zinc-200 hover:text-gold-400 transition-all"
                   >
-                    <Mail className="w-5 h-5 text-gold-500 shrink-0" />
+                    <Mail className="w-4 h-4 text-gold-500 shrink-0" />
                     <div>
                       <p className="text-xs text-zinc-400">Email Inquiry</p>
-                      <p className="text-sm font-semibold">{BUSINESS_INFO.email}</p>
+                      <p className="text-sm font-medium">{BUSINESS_INFO.email}</p>
                     </div>
                   </a>
                 </li>
@@ -188,12 +188,12 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
                     href={BUSINESS_INFO.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-3.5 rounded-2xl bg-charcoal-900 border border-white/10 text-zinc-200 hover:text-gold-400 hover:border-gold-500/40 transition-all"
+                    className="flex items-center gap-3.5 p-3 rounded-xl bg-charcoal-950 border border-white/10 text-zinc-200 hover:text-gold-400 transition-all"
                   >
-                    <InstagramIcon className="w-5 h-5 text-gold-500 shrink-0" />
+                    <InstagramIcon className="w-4 h-4 text-gold-500 shrink-0" />
                     <div>
                       <p className="text-xs text-zinc-400">Instagram</p>
-                      <p className="text-sm font-semibold">{BUSINESS_INFO.instagram}</p>
+                      <p className="text-sm font-medium">{BUSINESS_INFO.instagram}</p>
                     </div>
                   </a>
                 </li>

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { PROJECT_GALLERY, BUSINESS_INFO, getWhatsAppLink } from "@/lib/constants";
+import { PROJECT_GALLERY, getWhatsAppLink } from "@/lib/constants";
 import { MessageCircle, Eye, X } from "lucide-react";
 import CTASection from "@/components/CTASection";
 
@@ -12,11 +12,11 @@ export default function ProjectsPage() {
 
   const categories = [
     { id: "all", label: "All Projects" },
-    { id: "tv-unit", label: "TV Units & Wall Mounts" },
-    { id: "wall-panels", label: "Wall Panels (Foam, Gold, Steel)" },
-    { id: "curtains", label: "Curtains & Roller Blinds" },
+    { id: "tv-unit", label: "TV Units" },
+    { id: "wall-panels", label: "Wall Panels" },
+    { id: "curtains", label: "Curtains & Blinds" },
     { id: "flooring", label: "SPC Flooring" },
-    { id: "painting", label: "Painting & Décor" },
+    { id: "painting", label: "Painting" },
   ];
 
   const filteredProjects =
@@ -27,29 +27,29 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-charcoal-950 text-white">
       {/* Header Banner */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-charcoal-900 via-charcoal-950 to-charcoal-950 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-4">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-            Installation <span className="gold-gradient-text">Projects</span> Portfolio
+      <section className="relative py-12 md:py-16 bg-charcoal-900 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-3">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+            Installation <span className="text-gold-500">Portfolio</span>
           </h1>
 
-          <p className="text-zinc-300 text-base sm:text-lg max-w-3xl leading-relaxed">
-            Browse our recent TV wall installations, gold strip wall panels, blackout roller blinds, SPC vinyl flooring, and decorative paint work across Dubai, Sharjah, and Ajman.
+          <p className="text-sm sm:text-base text-zinc-400 font-normal max-w-2xl leading-relaxed">
+            Browse our recent TV wall mounting, gold strip wall panels, blackout roller blinds, SPC vinyl flooring, and paint work across Dubai, Sharjah, and Ajman.
           </p>
         </div>
       </section>
 
       {/* Filter Tabs & Gallery Grid */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section className="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Category Filters */}
-        <div className="flex items-center justify-start gap-2 overflow-x-auto pb-4 no-scrollbar">
+        <div className="flex items-center justify-start gap-2 overflow-x-auto pb-2 no-scrollbar">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
+              className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                 activeCategory === cat.id
-                  ? "bg-gold-500 text-charcoal-950 shadow-md font-bold"
+                  ? "bg-gold-500 text-charcoal-950 font-bold"
                   : "bg-charcoal-900 text-zinc-300 border border-white/10 hover:bg-charcoal-800 hover:text-white"
               }`}
             >
@@ -59,12 +59,12 @@ export default function ProjectsPage() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="group relative rounded-2xl overflow-hidden bg-charcoal-900 border border-white/10 hover:border-gold-500/40 transition-all duration-300 cursor-pointer shadow-xl"
+              className="group relative rounded-xl overflow-hidden bg-charcoal-900 border border-white/10 hover:border-gold-500/40 transition-all duration-300 cursor-pointer shadow-md"
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-charcoal-800">
                 <Image
@@ -75,17 +75,17 @@ export default function ProjectsPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/30 to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/20 to-transparent opacity-90" />
 
-                <div className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-charcoal-950/80 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-charcoal-950/80 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <Eye className="w-4 h-4 text-gold-400" />
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 z-10 space-y-1">
-                  <span className="text-[11px] uppercase tracking-wider text-gold-400 font-semibold block">
+                  <span className="text-[11px] uppercase tracking-wider text-gold-400 font-medium block">
                     {project.service} • {project.city}
                   </span>
-                  <h3 className="text-lg font-bold text-white group-hover:text-gold-300 transition-colors">
+                  <h3 className="text-base font-bold text-white group-hover:text-gold-300 transition-colors">
                     {project.title}
                   </h3>
                 </div>
@@ -97,16 +97,16 @@ export default function ProjectsPage() {
         {/* Lightbox Modal */}
         {selectedProject && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-in fade-in duration-200">
-            <div className="relative w-full max-w-3xl rounded-2xl glass-panel p-6 sm:p-8 overflow-hidden border border-gold-500/40 space-y-6">
+            <div className="relative w-full max-w-3xl rounded-2xl bg-charcoal-900 p-6 overflow-hidden border border-gold-500/40 space-y-6">
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 p-2 rounded-full bg-charcoal-900 text-zinc-300 hover:text-white hover:bg-gold-500/20 transition-colors z-20"
+                className="absolute top-4 right-4 p-2 rounded-full bg-charcoal-950 text-zinc-300 hover:text-white hover:bg-gold-500/20 transition-colors z-20"
                 aria-label="Close Modal"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
               </button>
 
-              <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-charcoal-900 border border-white/10">
+              <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-charcoal-950 border border-white/10">
                 <Image
                   src={selectedProject.image}
                   alt={selectedProject.title}
@@ -115,12 +115,12 @@ export default function ProjectsPage() {
                 />
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="space-y-1">
-                  <span className="text-xs uppercase font-semibold text-gold-400 tracking-wider">
+                  <span className="text-xs uppercase font-medium text-gold-400 tracking-wider">
                     {selectedProject.service} • {selectedProject.city}
                   </span>
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-xl font-bold text-white">
                     {selectedProject.title}
                   </h3>
                 </div>
@@ -131,7 +131,7 @@ export default function ProjectsPage() {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3.5 rounded-xl bg-emerald-whatsapp text-white font-bold text-xs flex items-center justify-center gap-2 whatsapp-glow"
+                  className="px-5 py-3 rounded-xl bg-emerald-whatsapp text-white font-bold text-xs flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4 fill-current" />
                   <span>Request Similar Quote</span>
