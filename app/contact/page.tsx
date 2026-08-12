@@ -2,7 +2,17 @@
 
 import React, { useState } from "react";
 import { BUSINESS_INFO, SERVICES, CITIES, getWhatsAppLink } from "@/lib/constants";
-import { MessageCircle, Phone, Mail, Instagram, MapPin, Send, Sparkles, CheckCircle2 } from "lucide-react";
+import { MessageCircle, Phone, Mail, MapPin, Send, Sparkles, CheckCircle2 } from "lucide-react";
+
+function InstagramIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+    </svg>
+  );
+}
 import CTASection from "@/components/CTASection";
 
 export default function ContactPage() {
@@ -190,7 +200,7 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-3.5 rounded-2xl bg-charcoal-900 border border-white/10 text-zinc-200 hover:text-gold-400 hover:border-gold-500/40 transition-all"
                   >
-                    <Instagram className="w-5 h-5 text-gold-500 shrink-0" />
+                    <InstagramIcon className="w-5 h-5 text-gold-500 shrink-0" />
                     <div>
                       <p className="text-xs text-zinc-400">Instagram Portfolio</p>
                       <p className="text-sm font-semibold">{BUSINESS_INFO.instagram}</p>
