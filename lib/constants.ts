@@ -9,7 +9,7 @@ export const BUSINESS_INFO = {
   instagramUrl: "https://instagram.com/arvo.interior",
   websiteUrl: "https://arvointerior-ae.vercel.app",
   serviceAreas: ["Dubai", "Sharjah", "Ajman"],
-  heroBadge: "Serving Dubai • Sharjah • Ajman",
+  heroLocation: "Dubai • Sharjah • Ajman",
   rating: 4.9,
   reviewsCount: 180,
   experienceYears: 7,
@@ -19,18 +19,18 @@ export const BUSINESS_INFO = {
 export const CITIES = [
   {
     name: "Dubai",
-    badge: "Dubai Installation Team",
-    description: "Fast, precision interior installation across Downtown, Marina, JLT, Business Bay, Villa communities & all Dubai zones.",
+    subtitle: "Downtown, Marina, JLT, Business Bay & Villa Communities",
+    description: "On-site installation teams dispatched daily for residential apartments and villa projects across Dubai.",
   },
   {
     name: "Sharjah",
-    badge: "Sharjah Installation Team",
-    description: "Expert interior installation services covering Al Majaz, Al Nahda, Muwaileh & all Sharjah residential & commercial units.",
+    subtitle: "Al Majaz, Al Nahda, Muwaileh & Residential Districts",
+    description: "Reliable installation specialists covering apartments, townhouses, and commercial spaces throughout Sharjah.",
   },
   {
     name: "Ajman",
-    badge: "Ajman Installation Team",
-    description: "Reliable, clean, same-day site visits for installation in Al Nuaimia, Al Rashidiya & all Ajman locations.",
+    subtitle: "Al Nuaimia, Al Rashidiya & Surrounding Areas",
+    description: "Clean, same-day site visits for wall mounting, paneling, blinds, and flooring fitting in Ajman.",
   },
 ] as const;
 
@@ -46,7 +46,7 @@ export interface ServiceItem {
   highlights: string[];
   includes: string[];
   idealFor: string[];
-  imagePlaceholder: string;
+  image: string;
   whatsappMessage: (city?: string) => string;
 }
 
@@ -55,198 +55,187 @@ export const SERVICES: ServiceItem[] = [
     id: "tv-unit-wall-installation",
     slug: "tv-unit-installation",
     title: "TV Unit / Wall Installation",
-    shortDescription: "Precision wall mounting, floating TV console fitting, background accent wall mounting, and concealed cable alignment.",
-    fullDescription: "Transform your living room with expert TV unit and TV wall installation. We handle heavy LED/OLED TV wall mounting, floating media console assembly & installation, LED strip background fitting, and hidden wire management. Professional installation only — you bring the materials, we deliver flawless fitting.",
+    shortDescription: "Laser-aligned TV wall mounting, floating console fitting, and concealed wire routing.",
+    fullDescription: "Professional installation for heavy LED/OLED TVs, media wall consoles, LED strip background fitting, and concealed cable management. You provide the TV mount and console — we handle secure wall anchoring and precision mounting.",
     iconName: "Tv",
     highlights: [
-      "Precision laser alignment & stud locator mounting",
-      "Concealed wire & cable channel fitting",
-      "Floating console & soundbar heavy anchor installation",
-      "Background backboard & LED strip mounting"
+      "Laser level alignment & stud locator mounting",
+      "Concealed cable channel routing",
+      "Heavy-duty wall anchors for concrete & drywall",
+      "Floating console & soundbar fitting"
     ],
     includes: [
-      "Heavy-duty bracket & anchor installation",
-      "Laser level positioning & height optimization",
-      "Floating wall console secure fitting",
-      "Cable trunking & hidden wire routing",
-      "Post-installation clean-up & testing"
+      "Bracket positioning & height calibration",
+      "Wall drilling & anchor installation",
+      "Floating console secure mounting",
+      "Wire trunking setup",
+      "Workspace cleanup"
     ],
     idealFor: [
       "Apartments & villas in Dubai, Sharjah, Ajman",
-      "Home cinema & modern living room setups",
-      "Rental units needing damage-free precision fitting"
+      "Home theater & living room upgrades"
     ],
-    imagePlaceholder: "/images/services/tv-unit-installation.jpg",
-    whatsappMessage: (city = "Dubai") => `Hi Arvo Interior, I would like to get a quote for TV Unit / Wall Installation in ${city}.`
+    image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&w=1000&q=80",
+    whatsappMessage: (city = "Dubai") => `Hi Arvo Interior, I need a quote for TV Unit / Wall Installation in ${city}.`
   },
   {
     id: "wall-panels-installation",
     slug: "wall-panels-installation",
     title: "Wall Panels Installation",
-    shortDescription: "Expert fitting of 3D foam panels, stainless steel profiles, and luxury gold strip accent wall paneling.",
-    fullDescription: "Elevate your interior walls with specialized wall panel installation. We accurately cut, measure, align, and fix acoustic foam panels, PVC marble sheets, stainless steel strips, and luxury gold inlay panels on any wall surface. Installation-only service ensuring seam-free patterns and solid adhesion.",
+    shortDescription: "Precision fitting of 3D foam panels, stainless steel profiles, and gold strip wall paneling.",
+    fullDescription: "Flawless wall paneling installation for acoustic foam panels, PVC marble sheets, stainless steel trims, and decorative gold strip wall panels. We ensure accurate pattern alignment, tight seam matching, and clean edge finishing.",
     iconName: "Layers",
     highlights: [
-      "Gold strip & stainless steel profile fitting",
+      "Gold strip & steel accent trim fitting",
       "Acoustic & 3D foam panel adhesive mounting",
-      "PVC marble sheet & WPC fluted panel installation",
-      "Perfect corner beveling & seam matching"
+      "PVC marble & WPC fluted panel fitting",
+      "Seamless corner trimming"
     ],
     includes: [
-      "Surface preparation & wall level assessment",
-      "Precision laser grid measurement",
-      "Adhesive/mechanical fixing of panels & gold trims",
-      "Corner trimming & edge sealant finishing",
-      "Thorough site cleaning after installation"
+      "Wall surface level inspection",
+      "Laser grid measurement & pattern layout",
+      "Panel fixing & adhesive bonding",
+      "Edge sealant application",
+      "Post-job site cleaning"
     ],
     idealFor: [
-      "Feature accent walls behind beds or TV units",
-      "Dining area wall upgrades",
-      "Commercial offices & salon feature walls"
+      "Feature accent walls behind TV units & beds",
+      "Dining room wall makeovers"
     ],
-    imagePlaceholder: "/images/services/wall-panels-installation.jpg",
-    whatsappMessage: (city = "Dubai") => `Hi Arvo Interior, I am interested in Wall Panels Installation (foam / steel / gold strip panels) in ${city}. Please send details.`
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80",
+    whatsappMessage: (city = "Dubai") => `Hi Arvo Interior, I need Wall Panels Installation (foam / steel / gold strip) in ${city}.`
   },
   {
     id: "curtains-blinds-installation",
     slug: "curtains-blinds-installation",
     title: "Curtains & Roller Blinds Installation",
-    shortDescription: "Heavy curtain rod fixing, motorized track mounting, motorized & manual roller blinds installation.",
-    fullDescription: "Achieve perfect window coverage with custom curtain and blinds installation. We install ceiling-mounted curtain tracks, heavy-duty metallic rods, motorized blinds, blackout roller blinds, and zebra shades across all window types and double-height ceilings.",
+    shortDescription: "Heavy curtain rod mounting, ceiling track fixing, and motorized or manual roller blinds fitting.",
+    fullDescription: "Secure window treatment installation across all ceiling heights. We mount heavy curtain rods, ceiling-embedded tracks, blackout roller blinds, and motorized window shades with laser level precision.",
     iconName: "Blinds",
     highlights: [
-      "Ceiling & wall curtain track bracket mounting",
-      "Motorized blind wiring & remote pairing installation",
-      "Double rod & sheer curtain hanging & leveling",
-      "Concrete, drywall, and gypsum ceiling anchoring"
+      "Ceiling & wall curtain track mounting",
+      "Motorized blind track wiring & remote pairing",
+      "Double rod & sheer curtain hanging",
+      "Gypsum & concrete ceiling anchoring"
     ],
     includes: [
-      "Laser level mark-up & drill hole anchoring",
-      "Curtain rod, track, & motorized blind installation",
-      "Drape hanging & pleat adjustment",
-      "Motorized blinds calibration",
-      "Clean workspace maintenance"
+      "Laser level mark-up & hole drilling",
+      "Track & rod anchor installation",
+      "Curtain hanging & pleat adjustment",
+      "Motorized blinds calibration"
     ],
     idealFor: [
-      "Villa living rooms with tall windows",
-      "Bedroom blackout roller blind setups",
-      "Office spaces needing glare control blinds"
+      "High-ceiling villa living rooms",
+      "Bedroom blackout setups & office blinds"
     ],
-    imagePlaceholder: "/images/services/curtains-blinds-installation.jpg",
-    whatsappMessage: (city = "Dubai") => `Hi Arvo Interior, I need Curtains & Roller Blinds Installation in ${city}. Can we schedule a site visit?`
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80",
+    whatsappMessage: (city = "Dubai") => `Hi Arvo Interior, I need Curtains & Roller Blinds Installation in ${city}.`
   },
   {
     id: "spc-flooring-installation",
     slug: "spc-flooring-installation",
     title: "SPC Flooring Installation",
-    shortDescription: "Flawless click-lock SPC vinyl floor fitting, underlayment placement, and skirting/skirting profile installation.",
-    fullDescription: "Get waterproof, durable flooring installed with master accuracy. Our SPC flooring installation includes floor inspection, foam underlayment laydown, click-lock vinyl plank fitting, expansion gap management, and matching skirting/threshold profile installation.",
+    shortDescription: "Click-lock vinyl SPC plank fitting, underlayment placement, and skirting board installation.",
+    fullDescription: "Professional SPC vinyl flooring installation with subfloor prep, underlayment laying, staggered plank fitting, door frame under-cutting, and matching skirting profile installation.",
     iconName: "Grid",
     highlights: [
-      "Click-lock vinyl SPC plank installation",
-      "Subfloor smoothing & underlayment laying",
-      "Door frame under-cutting & transition profile fitting",
-      "Baseboard skirting board fixing"
+      "Click-lock vinyl SPC plank laying",
+      "Underlayment pad placement",
+      "Door frame under-cutting & transition profiles",
+      "Skirting board fixing"
     ],
     includes: [
-      "Subfloor surface check & prep",
-      "Underlayment pad installation",
-      "Precision plank cutting & stagger pattern laying",
-      "Skirting & edge trim installation",
-      "Final floor cleanup & inspection"
+      "Subfloor surface check",
+      "Underlayment laying",
+      "Plank cutting & stagger pattern fitting",
+      "Skirting board installation",
+      "Final cleanup"
     ],
     idealFor: [
-      "Living room & bedroom flooring makeovers",
-      "Kitchen & moisture-prone area floor upgrades",
-      "Commercial retail & studio flooring replacement"
+      "Living room & bedroom floor makeovers",
+      "Kitchen & moisture-resistant flooring"
     ],
-    imagePlaceholder: "/images/services/spc-flooring-installation.jpg",
-    whatsappMessage: (city = "Dubai") => `Hi Arvo Interior, I want to get a quote for SPC Flooring Installation in ${city}.`
+    image: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1000&q=80",
+    whatsappMessage: (city = "Dubai") => `Hi Arvo Interior, I need SPC Flooring Installation in ${city}.`
   },
   {
     id: "painting-decor-finishing",
     slug: "painting-decor-finishing",
     title: "Painting & Décor Finishing",
-    shortDescription: "Interior wall repainting, accent wall painting, touch-up finishing, and protective surface coating.",
-    fullDescription: "Refresh your space with professional interior painting and finishing installation. We apply smooth primer coats, multi-layer wall paint, geometric accent wall finishes, and protective sealants with clean edge masking and zero mess.",
+    shortDescription: "Interior wall repainting, putty patching, feature wall painting, and clean edge masking.",
+    fullDescription: "Clean interior wall painting and finishing. Includes furniture protection, wall crack filling, putty smooth sanding, primer coating, and multi-layer wall paint application with crisp borders.",
     iconName: "Paintbrush",
     highlights: [
-      "Precision edge masking & furniture protection",
-      "Wall crack filling, sanding & putty smooth prep",
-      "Multi-coat interior wall & ceiling painting",
-      "Decorative accent wall color application"
+      "Furniture & floor drop-cloth masking",
+      "Wall crack repair & putty smooth sanding",
+      "Multi-coat interior wall painting",
+      "Accent wall color application"
     ],
     includes: [
-      "Floor & furniture drop-cloth protection",
-      "Wall scraping, putty patching & smooth sanding",
-      "Primer coat + two topcoats paint application",
-      "Clean painter tape removal & crisp border finish",
-      "Complete post-paint site cleanup"
+      "Surface scraping & putty smoothing",
+      "Primer coat application",
+      "Two topcoats paint application",
+      "Masking tape removal & site cleanup"
     ],
     idealFor: [
-      "End-of-lease villa & apartment repainting",
-      "New home interior customization",
-      "Feature accent wall color refresh"
+      "Apartment repainting before moving in",
+      "Feature accent wall color updates"
     ],
-    imagePlaceholder: "/images/services/painting-decor-finishing.jpg",
-    whatsappMessage: (city = "Dubai") => `Hi Arvo Interior, I need Painting & Décor Finishing installation in ${city}. Please contact me.`
+    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=80",
+    whatsappMessage: (city = "Dubai") => `Hi Arvo Interior, I need Painting & Décor Finishing installation in ${city}.`
   }
 ];
 
 export const WHY_CHOOSE_US = [
   {
-    title: "Installation-Only Experts",
-    description: "We don't sell materials — we specialize 100% in expert installation. You buy what you love, we fit it to perfection with master craftsmanship.",
-    icon: "ShieldCheck",
+    title: "Installation-Only Focus",
+    description: "We focus 100% on fitting labor. You choose and purchase materials from your preferred vendor, and we deliver master installation.",
   },
   {
-    title: "Authentic UAE Workmanship",
-    description: "Hundreds of completed installations across Dubai, Sharjah, and Ajman with verified high ratings and satisfied homeowners.",
-    icon: "Award",
+    title: "Transparent Labor Pricing",
+    description: "Upfront labor quotes with no hidden material markups or surprise fees after the job is completed.",
   },
   {
-    title: "Fast & Clean Execution",
-    description: "Punctual site visits, precision laser leveling, heavy-duty anchors, and complete site cleanup after every project.",
-    icon: "Zap",
+    title: "Fast & Clean Workmanship",
+    description: "Laser level alignment, heavy-duty anchors for concrete or drywall, and full site cleanup when finished.",
   },
   {
-    title: "Satisfaction Guaranteed",
-    description: "Our motto: 'Your Satisfaction is Our Commitment'. We inspect every alignment and finish before completing any job.",
-    icon: "ThumbsUp",
+    title: "Satisfaction Committed",
+    description: "Our motto: 'Your Satisfaction is Our Commitment'. We inspect every fitting with you before wrapping up.",
   },
 ];
 
 export const PROJECT_GALLERY = [
   {
     id: "p1",
-    title: "Luxury TV Wall & Fluted Panels",
+    title: "TV Wall Mounting & Concealed Wiring",
     service: "TV Unit / Wall Installation",
     city: "Dubai (Downtown)",
-    image: "/images/projects/project-1.jpg",
+    image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&w=1000&q=80",
     category: "tv-unit",
   },
   {
     id: "p2",
-    title: "Gold Strip & Charcoal Wall Panel Installation",
+    title: "Gold Strip & Fluted Wall Panel Fitting",
     service: "Wall Panels Installation",
     city: "Sharjah (Al Majaz)",
-    image: "/images/projects/project-2.jpg",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80",
     category: "wall-panels",
   },
   {
     id: "p3",
-    title: "Motorized Blackout Blinds Fitting",
+    title: "Ceiling-Mounted Blackout Curtains & Blinds",
     service: "Curtains & Roller Blinds Installation",
-    city: "Dubai (Dubai Marina)",
-    image: "/images/projects/project-3.jpg",
+    city: "Dubai (Marina)",
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80",
     category: "curtains",
   },
   {
     id: "p4",
-    title: "Wood Grain SPC Vinyl Flooring",
+    title: "Wood-Grain SPC Click Flooring Installation",
     service: "SPC Flooring Installation",
     city: "Ajman (Al Nuaimia)",
-    image: "/images/projects/project-4.jpg",
+    image: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1000&q=80",
     category: "flooring",
   },
   {
@@ -254,22 +243,22 @@ export const PROJECT_GALLERY = [
     title: "Feature Accent Wall Painting & Finishing",
     service: "Painting & Décor Finishing",
     city: "Sharjah (Muwaileh)",
-    image: "/images/projects/project-5.jpg",
+    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=80",
     category: "painting",
   },
   {
     id: "p6",
-    title: "Floating TV Console & LED Backlight Mount",
+    title: "Floating Media Console & LED Mount",
     service: "TV Unit / Wall Installation",
     city: "Dubai (JLT)",
-    image: "/images/projects/project-6.jpg",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
     category: "tv-unit",
   },
 ];
 
 export function getWhatsAppLink(message?: string): string {
   const defaultText = encodeURIComponent(
-    `Hi Arvo Interior, I would like to get a free quote for installation service in UAE.`
+    `Hi Arvo Interior, I would like to get a quote for installation service in UAE.`
   );
   const textParam = message ? encodeURIComponent(message) : defaultText;
   return `https://wa.me/${BUSINESS_INFO.phoneRaw}?text=${textParam}`;
