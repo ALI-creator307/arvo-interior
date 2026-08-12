@@ -33,11 +33,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
           ? "glass-header py-3 shadow-xl"
           : "bg-charcoal-950/90 backdrop-blur-md py-4 border-b border-white/5"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
@@ -48,9 +47,6 @@ export default function Header() {
           <div className="flex flex-col">
             <span className="font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-gold-400 transition-colors">
               ARVO <span className="text-gold-500">INTERIOR</span>
-            </span>
-            <span className="text-[11px] text-zinc-400 font-medium">
-              Installation Specialists
             </span>
           </div>
         </Link>
@@ -63,11 +59,10 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  isActive
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${isActive
                     ? "bg-gold-500 text-charcoal-950 font-semibold shadow-sm"
                     : "text-zinc-300 hover:text-white hover:bg-white/5"
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
@@ -117,11 +112,10 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-xl text-base font-medium transition-all ${
-                    isActive
+                  className={`px-4 py-3 rounded-xl text-base font-medium transition-all ${isActive
                       ? "bg-gold-500 text-charcoal-950 font-bold"
                       : "text-zinc-200 hover:bg-white/5 hover:text-gold-400"
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </Link>
