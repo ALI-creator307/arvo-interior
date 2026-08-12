@@ -211,7 +211,7 @@ export const PROJECT_GALLERY = [
     title: "TV Wall Mounting & Concealed Wiring",
     service: "TV Unit / Wall Installation",
     city: "Dubai (Downtown)",
-    image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
     category: "tv-unit",
   },
   {
@@ -219,7 +219,7 @@ export const PROJECT_GALLERY = [
     title: "Gold Strip & Fluted Wall Panel Fitting",
     service: "Wall Panels Installation",
     city: "Sharjah (Al Majaz)",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=80",
     category: "wall-panels",
   },
   {
@@ -227,7 +227,7 @@ export const PROJECT_GALLERY = [
     title: "Ceiling-Mounted Blackout Curtains & Blinds",
     service: "Curtains & Roller Blinds Installation",
     city: "Dubai (Marina)",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1540518614846-7ede433c517a?auto=format&fit=crop&w=1000&q=80",
     category: "curtains",
   },
   {
@@ -235,7 +235,7 @@ export const PROJECT_GALLERY = [
     title: "Wood-Grain SPC Click Flooring Installation",
     service: "SPC Flooring Installation",
     city: "Ajman (Al Nuaimia)",
-    image: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1000&q=80",
     category: "flooring",
   },
   {
@@ -243,7 +243,7 @@ export const PROJECT_GALLERY = [
     title: "Feature Accent Wall Painting & Finishing",
     service: "Painting & Décor Finishing",
     city: "Sharjah (Muwaileh)",
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80",
     category: "painting",
   },
   {
@@ -251,7 +251,7 @@ export const PROJECT_GALLERY = [
     title: "Floating Media Console & LED Mount",
     service: "TV Unit / Wall Installation",
     city: "Dubai (JLT)",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1000&q=80",
     category: "tv-unit",
   },
 ];
