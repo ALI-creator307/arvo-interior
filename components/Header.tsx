@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, MessageCircle, Phone, Sparkles } from "lucide-react";
+import { Menu, X, MessageCircle, Phone } from "lucide-react";
 import { BUSINESS_INFO, getWhatsAppLink } from "@/lib/constants";
 
 export default function Header() {
@@ -36,27 +36,27 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
           ? "glass-header py-3 shadow-xl"
-          : "bg-charcoal-950/80 backdrop-blur-md py-4 border-b border-white/5"
+          : "bg-charcoal-950/90 backdrop-blur-md py-4 border-b border-white/5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-lg gold-gradient-bg flex items-center justify-center text-charcoal-950 font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+          <div className="w-9 h-9 rounded-lg gold-gradient-bg flex items-center justify-center text-charcoal-950 font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
             A
           </div>
           <div className="flex flex-col">
             <span className="font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-gold-400 transition-colors">
               ARVO <span className="text-gold-500">INTERIOR</span>
             </span>
-            <span className="text-[10px] uppercase tracking-widest text-gold-400 font-semibold flex items-center gap-1">
-              <Sparkles className="w-2.5 h-2.5" /> Installation Specialists
+            <span className="text-[11px] text-zinc-400 font-medium">
+              Installation Specialists
             </span>
           </div>
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-1 bg-charcoal-900/60 p-1.5 rounded-full border border-white/10">
+        <nav className="hidden md:flex items-center gap-1 bg-charcoal-900/80 px-2 py-1.5 rounded-full border border-white/10">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -65,7 +65,7 @@ export default function Header() {
                 href={link.href}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   isActive
-                    ? "bg-gold-500 text-charcoal-950 font-semibold shadow-md"
+                    ? "bg-gold-500 text-charcoal-950 font-semibold shadow-sm"
                     : "text-zinc-300 hover:text-white hover:bg-white/5"
                 }`}
               >
@@ -92,7 +92,7 @@ export default function Header() {
             className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold bg-emerald-whatsapp text-white whatsapp-glow hover:bg-emerald-600 transition-all hover:scale-105 active:scale-95"
           >
             <MessageCircle className="w-4 h-4 fill-current" />
-            <span>Get Quote on WhatsApp</span>
+            <span>WhatsApp Quote</span>
           </a>
         </div>
 
@@ -100,7 +100,7 @@ export default function Header() {
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Navigation Menu"
-          className="md:hidden p-2.5 rounded-lg bg-charcoal-900 text-zinc-200 border border-white/10 hover:text-gold-400"
+          className="md:hidden p-2.5 rounded-xl bg-charcoal-900 text-zinc-200 border border-white/10 hover:text-gold-400"
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -109,7 +109,7 @@ export default function Header() {
       {/* Mobile Drawer Navigation */}
       {isMobileMenuOpen && (
         <div className="md:hidden glass-panel border-b border-gold-500/20 px-6 py-6 space-y-4 animate-in slide-in-from-top duration-200">
-          <div className="flex flex-col space-y-2">
+          <div className="flex flex-col space-y-1.5">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -117,7 +117,7 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-xl text-base font-semibold transition-all ${
+                  className={`px-4 py-3 rounded-xl text-base font-medium transition-all ${
                     isActive
                       ? "bg-gold-500 text-charcoal-950 font-bold"
                       : "text-zinc-200 hover:bg-white/5 hover:text-gold-400"
