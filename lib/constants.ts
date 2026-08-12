@@ -227,7 +227,7 @@ export const PROJECT_GALLERY = [
     title: "Ceiling-Mounted Blackout Curtains & Blinds",
     service: "Curtains & Roller Blinds Installation",
     city: "Dubai (Marina)",
-    image: "https://images.unsplash.com/photo-1540518614846-7ede433c517a?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80",
     category: "curtains",
   },
   {
