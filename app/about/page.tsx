@@ -15,7 +15,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-charcoal-950 text-white">
       {/* Header Banner */}
       <section className="relative py-12 md:py-16 bg-charcoal-900 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-3">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 text-left space-y-3">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
             About <span className="text-gold-500">Arvo Interior</span>
           </h1>
@@ -27,7 +27,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story & Positioning Section */}
-      <section className="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 md:py-16 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <div className="lg:col-span-7 space-y-5">
             <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
       {/* Cities Coverage Section */}
       <section className="py-12 md:py-16 bg-charcoal-900 border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 space-y-8">
           <div className="max-w-2xl space-y-2 text-left">
             <h2 className="text-2xl sm:text-3xl font-bold text-white">
               Service Locations

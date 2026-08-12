@@ -38,7 +38,7 @@ export default function Header() {
           : "bg-charcoal-950/90 backdrop-blur-md py-4 border-b border-white/5"
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-9 h-9 rounded-lg gold-gradient-bg flex items-center justify-center text-charcoal-950 font-bold text-lg shadow-md group-hover:scale-105 transition-transform">

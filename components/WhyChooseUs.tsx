@@ -10,7 +10,7 @@ export default function WhyChooseUs() {
 
   return (
     <section className="py-12 sm:py-20 bg-charcoal-900 border-y border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Photography Frame */}
           <div className="lg:col-span-5">

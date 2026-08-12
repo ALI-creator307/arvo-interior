@@ -15,9 +15,9 @@ const ICON_MAP = {
 export default function ServicesGrid() {
   return (
     <section className="py-12 sm:py-20 bg-charcoal-950 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Clean Header */}
-        <div className="max-w-xl mb-10 space-y-2 text-left">
+        <div className="max-w-2xl mb-10 space-y-2 text-left">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
             Our Installation <span className="text-gold-500">Services</span>
           </h2>

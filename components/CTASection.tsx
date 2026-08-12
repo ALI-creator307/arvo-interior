@@ -9,12 +9,12 @@ export default function CTASection() {
 
   return (
     <section className="py-12 sm:py-16 bg-charcoal-900 border-t border-white/5 relative">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-10 text-center space-y-5">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
           Have an Installation Project? <span className="text-gold-500">Chat with Us</span>
         </h2>
 
-        <p className="text-zinc-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+        <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
           Send us a quick photo or project details on WhatsApp. We&apos;ll provide an upfront, transparent labor quote for your home in Dubai, Sharjah, or Ajman.
         </p>
 

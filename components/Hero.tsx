@@ -12,7 +12,7 @@ export default function Hero() {
 
   return (
     <section className="relative pt-8 pb-16 md:pt-16 md:pb-24 bg-charcoal-950 border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Heading, Subheadline & CTAs */}
           <div className="lg:col-span-7 space-y-5 text-left">

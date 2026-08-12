@@ -28,7 +28,7 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-charcoal-950 text-white">
       {/* Header Banner */}
       <section className="relative py-12 md:py-16 bg-charcoal-900 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-3">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 text-left space-y-3">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
             Installation <span className="text-gold-500">Portfolio</span>
           </h1>
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Filter Tabs & Gallery Grid */}
-      <section className="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="py-12 md:py-16 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 space-y-8">
         {/* Category Filters */}
         <div className="flex items-center justify-start gap-2 overflow-x-auto pb-2 no-scrollbar">
           {categories.map((cat) => (

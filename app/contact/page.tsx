@@ -41,7 +41,7 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
     <div className="min-h-screen bg-charcoal-950 text-white">
       {/* Header Banner */}
       <section className="relative py-12 md:py-16 bg-charcoal-900 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-3">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 text-left space-y-3">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
             Contact <span className="text-gold-500">Arvo Interior</span>
           </h1>
@@ -53,7 +53,7 @@ Details: ${formData.message || "I would like a quote for installation labor."}`;
       </section>
 
       {/* Main Form & Contact Info Section */}
-      <section className="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 md:py-16 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* Form */}
           <div className="lg:col-span-7 rounded-2xl bg-charcoal-900 p-6 sm:p-8 border border-white/10 space-y-5">

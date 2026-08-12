@@ -23,7 +23,7 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-charcoal-950 text-white">
       {/* Header Banner */}
       <section className="relative py-12 md:py-16 bg-charcoal-900 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-3">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 text-left space-y-3">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
             Our Installation <span className="text-gold-500">Services</span>
           </h1>
@@ -35,7 +35,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services List Breakdown */}
-      <section className="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="py-12 md:py-16 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 space-y-12">
         {SERVICES.map((service, index) => {
           const IconComponent = ICON_MAP[service.iconName];
           const isEven = index % 2 === 0;

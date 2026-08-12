@@ -26,10 +26,10 @@ export default function ProjectGalleryPreview() {
 
   return (
     <section className="py-12 sm:py-20 bg-charcoal-950 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-          <div className="space-y-2 max-w-xl text-left">
+          <div className="space-y-2 max-w-2xl text-left">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
               Recent <span className="text-gold-500">Projects</span>
             </h2>
