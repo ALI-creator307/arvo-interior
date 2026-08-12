@@ -16,14 +16,14 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Heading, Subheadline & CTAs */}
           <div className="lg:col-span-7 space-y-5 text-left">
-            {/* Main Dominant Heading */}
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+            {/* Main Dominant Heading - Explicit Mobile Base text-4xl */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] sm:leading-tight">
               Interior Installation Services in{" "}
               <span className="text-gold-500">Dubai, Sharjah & Ajman</span>
             </h1>
 
-            {/* Visually Secondary Description */}
-            <p className="text-sm sm:text-base lg:text-lg text-zinc-400 font-normal max-w-xl leading-relaxed">
+            {/* Visually Secondary Subtext */}
+            <p className="text-sm sm:text-base lg:text-lg text-zinc-400 font-normal max-w-lg leading-relaxed mt-3">
               We specialize in installation labor — fitting TV wall units, accent wall paneling, window blinds, SPC vinyl flooring, and interior painting across the UAE. You supply the materials; we deliver clean, laser-aligned installation.
             </p>
 
@@ -53,7 +53,7 @@ export default function Hero() {
                 href={heroWhatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-sm sm:text-base font-bold bg-emerald-whatsapp text-white hover:bg-emerald-600 transition-all shadow-md"
+                className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-sm sm:text-base font-bold bg-emerald-whatsapp text-white hover:bg-emerald-600 hover:scale-[1.02] transition-all shadow-md"
               >
                 <MessageCircle className="w-5 h-5 fill-current" />
                 <span>Get Free WhatsApp Quote</span>
@@ -69,8 +69,8 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Hero Image Frame */}
-          <div className="lg:col-span-5 relative">
+          {/* Right Column: Hero Image Frame (Clean image display with caption below) */}
+          <div className="lg:col-span-5 space-y-3">
             <div className="relative rounded-2xl overflow-hidden bg-charcoal-900 border border-white/10 shadow-xl">
               <div className="relative aspect-[4/3] sm:aspect-[4/5] w-full overflow-hidden">
                 <Image
@@ -81,15 +81,11 @@ export default function Hero() {
                   sizes="(max-width: 1024px) 100vw, 500px"
                   className="object-cover"
                 />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent" />
-
-                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-charcoal-950/90 backdrop-blur-md border border-white/10 text-xs">
-                  <p className="font-semibold text-white text-sm">TV Wall & Console Fitting</p>
-                  <p className="text-zinc-400 mt-0.5">Dubai • Sharjah • Ajman Installation</p>
-                </div>
               </div>
             </div>
+            <p className="text-xs text-zinc-400 text-left">
+              TV Wall & Console Fitting • Serving Dubai, Sharjah & Ajman
+            </p>
           </div>
         </div>
       </div>
