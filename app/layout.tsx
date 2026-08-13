@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import StructuredData from "@/components/StructuredData";
 import { BUSINESS_INFO } from "@/lib/constants";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -63,6 +64,7 @@ export default function RootLayout({
         <main className="flex-1 pt-20">{children}</main>
         <Footer />
         <WhatsAppFloatingButton />
+        <Analytics />
       </body>
     </html>
   );
